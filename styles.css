@@ -4,6 +4,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     display: flex;
@@ -32,7 +33,6 @@ body{
     width: 100%;
     align-items: center;
     justify-content: space-around;
-    gap: 0px;
 }
 
 .navbar a{
@@ -45,21 +45,22 @@ body{
     align-items: center;
 }
 
-.navbar a.name{
+a.name{
     font-family: 'Purple Purse', serif;
     color: rgb(52, 22, 1);
     font-weight: 900;
-    font-size: 24px ;
-    float: left;
+    font-size: 24px;
+    padding: 20px 40px 20px 90px;
 }
 
 .about{
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    padding: 0 40px;
+    gap: 40px;
 }
 .about a{
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 500;
 }
 
@@ -77,6 +78,7 @@ i.fa-shopping-bag{
     border-radius: 50%;
     border: 1px solid rgb(0, 0, 0);
     padding: 10px;
+    margin: 80px;
     font-size: 17px;
     position: relative;
 }
@@ -87,15 +89,15 @@ i.fa-shopping-bag{
     height: 8px;
     width: 8px;
     border-radius: 4px;
-    top: 8px;
-    right: 5px
+    top: 80px;
+    right: 80px;
 }
 
 .heading{
     font-family: 'Purple Purse', serif;
     color: rgb(52, 22, 1);
-    font-weight:900;
-    font-size: 120px ;
+    font-weight: 900;
+    font-size: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,8 +105,8 @@ i.fa-shopping-bag{
 }
 
 .head-content{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     height: 500px;
@@ -112,16 +114,19 @@ i.fa-shopping-bag{
 }
 
 .content-left{
-    display: grid;
-    width:auto;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    gap: 20px;
+    height: auto;
+    width: auto;
     padding-left: 140px;
     align-items: center;
 }
 
 .text-1{
     font-family: 'Noto Sans', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(52, 22, 1);
 }
 
@@ -147,6 +152,7 @@ i.fa-shopping-bag{
     border-radius: 20px;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .videolink{
@@ -163,11 +169,13 @@ i.material-symbols-outlined{
     font-size: 22px;
     font-weight: 900;
     vertical-align: -30%;
+    cursor: pointer;
 }
 
 .content-image{
     overflow: hidden;
     align-items: center;
+    flex-basis: 100%;
 }
 
 .content-image img{
@@ -175,8 +183,6 @@ i.material-symbols-outlined{
     max-height: 100%;
     object-fit: contain;
     border-radius: 49px;
-    margin: 10px;
-    padding: 30px;
 }
 
 .content-left-2{
@@ -191,12 +197,15 @@ i.material-symbols-outlined{
 }
 
 .content-right{
-    margin-right: 70px;
     font-family: 'Purple Purse', serif;
     font-weight: 900;
     color: rgb(52, 22, 1);
     display:flex;
     flex-direction: column;
+    flex-basis: 100%;
+    height: auto;
+    width: auto;
+    padding-right: 140px;
     align-items: center;
     gap: 14px;
 }
@@ -269,6 +278,511 @@ p.tagtext{
 }
 
 span.sparkle{
-    margin-left: 18px;
+    margin-left:35px;
 }
 
+.product{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top:120px;
+    padding-right: 140px;
+    padding-left: 140px;
+    height: 900px;
+}
+
+.producthead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-title{
+    font-family: 'Purple Purse', serif;
+    color: rgb(52, 22, 1);
+    font-weight:900;
+    font-size: 55px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-wrap{
+    display: flex;
+    margin-top: 20px;
+}
+
+.product-videolink{
+    font-family: 'Purple Purse', serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: rgb(52, 22, 1);
+    margin-top: 30px;
+}
+
+.product-wrap i.material-symbols-outlined{
+    font-size: 35px;
+    vertical-align: -20%;
+    cursor: pointer;
+}
+
+.product-content{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 30px;
+    align-items: center;
+}
+
+.product-review{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    gap: 40px;
+}
+
+.product-image{
+    flex-basis: 100%;
+    overflow: hidden;
+    align-items: center;
+    height: 100%;
+}
+
+.product-image img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 49px;
+}
+
+.review-overview{
+    display: flex;
+    flex-direction: column;
+}
+.product-rating{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.rating-text{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 22px;
+    color: rgb(52, 22, 1);
+}
+
+.rating-number{
+    font-family: 'Purple Purse', serif;
+    font-size: 45px;
+    color: rgb(52, 22, 1);
+}
+
+.review-count{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    color: rgb(52, 22, 1);
+}
+
+.checked {
+    color: orange;
+}
+
+
+.product-video{
+   display: inline-block;
+   position: relative;
+}
+
+.product-video img{
+    object-fit: contain;
+    border-radius: 49px;
+    filter: blur(3px);
+}
+
+.playicon{
+    position: absolute;
+    top: 37%;
+    left: 45%;
+    color: rgb(190, 187, 187);
+    font-size: 90px;
+    cursor: pointer;
+}
+
+.bestseller{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding-top: 70px;
+    padding-right: 140px;
+    padding-left: 140px;
+    height: 830px;
+    background-color: rgb(237, 237, 237);
+}
+
+.bestseller-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bestseller-heading{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 800px;
+}
+
+.bestseller-text{
+    font-family: 'Purple Purse', serif;
+    color: rgb(52, 22, 1);
+    font-weight:900;
+    font-size: 55px;
+}
+
+.bestseller-content{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    color: rgb(52, 22, 1);
+}
+
+.bestseller-swiper{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 65px;
+    padding-top: 70px;
+}
+
+.swiper span.material-symbols-outlined{
+    font-size: 70px;
+    cursor: pointer;
+}
+
+.bestseller-products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 55px;
+}
+
+.bs-container{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-between;
+    gap: 25px;
+    border: 1px solid grey;
+    border-radius: 30px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.bs-product-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bs-product-name{
+    font-family: 'Purple Purse', serif;
+    color: rgb(52, 22, 1);
+    font-weight:900;
+    font-size: 25px;
+}
+
+.bs-product-price{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(52, 22, 1);
+}
+
+.bs-container img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 49px;
+    aspect-ratio: 1/1;
+}
+
+.testimonial{
+    background-image: url("../Images/backgroung.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    margin: 100px 140px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgb(118, 118, 118);
+}
+
+
+.testimonial-content{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content:space-evenly;
+    padding: 30px;
+}
+
+.user-image{
+    width: 100px;
+    height: 100px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-heading{
+    font-family: 'Purple Purse', serif;
+    color: rgb(255, 255, 255);
+    font-weight:900;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.rating-test{
+    margin-bottom: 30px;
+}
+
+.t-checked {
+    color: rgb(255, 208, 0);
+}
+
+.testimonial-text{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    padding: 0 60px;
+    margin-bottom: 30px;
+}
+
+.whiteswipe{
+    color: white;
+    padding: 0px
+}
+
+.cover{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 40px 140px;
+    justify-content: space-between;
+}
+
+.cover-1{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+}
+
+.cover-2{
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    height: auto;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cover-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.cover-image-1 img{
+    max-width: 100%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 49px;
+}
+
+.cover-image-2 img{
+    max-width: 100%;
+    max-height:100%;
+    object-fit: contain;
+    border-radius: 49px;
+}
+
+.cover-text{
+    font-family: 'Purple Purse', serif;
+    color: rgb(52, 22, 1);
+    font-weight:900;
+    font-size: 65px;
+    padding: 20px 0;
+}
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.comment p{
+    font-family: 'Purple Purse', serif;
+    color: rgb(52, 22, 1);
+    font-weight:900;
+    font-size: 25px;
+    width: 90%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.comment-name{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer{
+    height: auto;
+    background-color: black;
+    color: white;
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.social-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.name{
+    font-family: 'Purple Purse', serif;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    padding: 20px 140px;
+}
+
+.icon{
+    padding: 25px 140px;
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.fa-instagram, .fa-google, .fa-linkedin, .fa-youtube{
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.longbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.adv-bar-1{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: auto;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    border: 2px solid rgb(241, 241, 51);
+    margin-top: 140px;
+    margin-left: -5px;
+    margin-right: -5px;
+    transform: rotate(4deg);
+    color: white;
+    font-size: 26px ;
+    font-family: 'Purple Purse', serif;
+    font-weight: 900;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.adv-bar-2{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: auto;
+    background-color: rgb(236, 236, 57);
+    background-size: cover;
+    margin-top: -80px;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: 40px;
+    transform: rotate(-6deg);
+    color: rgb(0, 0, 0);
+    font-size: 26px ;
+    font-family: 'Purple Purse', serif;
+    font-weight: 900;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ad-tags{
+    display: inline-flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 70px 0;
+}
+
+.ad-tag1{
+    background-color: rgb(208, 166, 244);
+    font-size: 20px ;
+    font-family: 'Purple Purse', serif;
+}
+
+.ad-tag2{
+    background-color: rgb(233, 118, 35);
+    font-size: 20px ;
+    font-family: 'Purple Purse', serif;
+}
+
+.ad-tag3{
+    background-color: rgb(8, 107, 21);
+    font-size: 20px ;
+    font-family: 'Purple Purse', serif;
+}
+
+.ad-tag4{
+    background-color: rgb(13, 157, 235);
+    font-size: 20px ;
+    font-family: 'Purple Purse', serif;
+}
+
+.copy-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 0 140px;
+}
+
+.copy-right-sec, .mail{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+}
+
+.designer{
+    text-decoration: none;
+    color: yellow;
+}
